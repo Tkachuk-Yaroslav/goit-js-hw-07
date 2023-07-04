@@ -36,5 +36,7 @@ function onPhotoClick(event) {
     event.preventDefault();
     if (event.target.tagName === 'IMG') {
         console.log("Клацнули саме по картинці!")
+        const imgURL = event.target.dataset.source;
+        console.log(imgURL);
     }
 }
