@@ -34,9 +34,16 @@ gallaryContainerElem.addEventListener('click', onPhotoClick);
 
 function onPhotoClick(event) {
     event.preventDefault();
+    const imgURL = event.target.dataset.source;
     if (event.target.tagName === 'IMG') {
         console.log("Клацнули саме по картинці!")
-        const imgURL = event.target.dataset.source;
+        
         console.log(imgURL);
     }
+/////////////////4 та 5 частини////////
+    const instance = basicLightbox.create(`
+    <img src="${imgURL}" width="800" height="600">
+`)
+
+    instance.show()
 }
