@@ -29,8 +29,10 @@ function createMurcup(gallarys) {
     return murcup.join('');
 }
 
-{/* <li class="gallery__item">
-   <a class="gallery__link" href="large-image.jpg">
-      <img class="gallery__image" src="small-image.jpg" alt="Image description" />
-   </a>
-</li> */}
+
+//використовую бібліотеку SimpleLightbox
+const lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+    // captionPosition: 'outside'
+});
